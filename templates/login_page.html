@@ -1,0 +1,229 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    
+  
+      <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+  
+      <meta name="apple-mobile-web-app-title" content="CodePen">
+  
+      <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+  
+      <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+  
+  
+  
+    
+    
+  
+    <title>Glassmorphism | Simple Login Form</title>
+  
+      <link rel="canonical" href="https://codepen.io/Athul369/pen/abepqRJ">
+    
+    
+    
+    
+  <style>
+  @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+  * {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  body {
+    height: 100vh;
+    background-color: #080710;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 530px;
+    width: 430px;
+  }
+  .background .shapes {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  .shapes:nth-child(1) {
+    top: -50px;
+    right: -50px;
+    background: rgb(131, 58, 180);
+    background: rgb(0, 255, 59);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 255, 59, 1) 0%,
+      rgba(0, 18, 255, 1) 100%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  }
+  .shapes:nth-child(2) {
+    bottom: -50px;
+    left: -50px;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 1) 0%,
+      rgba(188, 0, 255, 1) 100%,
+      rgba(252, 176, 69, 1) 100%
+    );
+  }
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 460px;
+    width: 340px;
+    z-index: 5;
+    padding: 20px;
+    overflow: hidden;
+    background: rgba(250, 250, 250, 0.15);
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  form h3 {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    padding: 10px 0px;
+    font-size: 2rem;
+    text-align: center;
+  }
+  form label {
+    display: block;
+    padding: 20px 0px 10px 0px;
+    font-size: 1.2rem;
+    color: #ffffff;
+  }
+  form input[type="text"],
+  input[type="password"] {
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff0b;
+    color: #ffffffdb;
+    font-size: 1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    cursor: pointer;
+    transition: all 450ms;
+  }
+  form input[type="text"]:hover,
+  input[type="password"]:hover {
+    background-color: #ffffff10;
+  }
+  form input::placeholder {
+    font-size: 14px;
+    color: #ffffffdb;
+  }
+  
+  form button {
+    height: 40px;
+    width: 100%;
+    margin: 40px 0px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    color: #000000c3;
+    cursor: pointer;
+    transition: all 450ms;
+  }
+  form button:hover {
+    background-color: #ffffffc2;
+  }
+  form .social {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+  }
+  .social .gg,
+  .fb {
+    width: 140px;
+    padding: 5px;
+    background-color: #00000023;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 450ms;
+  }
+  .social .gg:hover,
+  .fb:hover {
+    background-color: #00000036;
+  }
+  </style>
+  
+    
+    
+    
+  </head>
+  
+  <body translate="no">
+    
+  
+  
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphism Login Form</title>
+    <link rel="stylesheet" href="./style.css">
+  
+  
+  
+    <div class="background">
+      <div class="shapes"></div>
+      <div class="shapes"></div>
+    </div>
+    <form action="/predict" method="post">
+      <h3>Login Form</h3>
+      <label for="user"> Number of Dependents</label>
+      <input type="text" name="no_of_dependents" id="no_of_dependents" placeholder="Enter Number of Dependents" autocomplete="Number of Dependents">
+      <label for="psw">Education</label>
+      <input type="text" name="education" id="education" placeholder="Enter Education" autocomplete="education">
+      <label for="user"> Self Employed</label>
+      <input type="text" name="self_employed" id="self_employed" placeholder="Enter Self Employment Status" autocomplete="name">
+      <label for="psw">Income Per Annum</label>
+      <input type="text" name="income_annum" id="income_annum" placeholder="Enter Income Per Annum" autocomplete="password">
+      <label for="user"> Loan Term</label>
+      <input type="text" name="loan_term" id="loan_term" placeholder="Enter Loan Term" autocomplete="name">
+      <label for="psw">Cibil Score</label>
+      <input type="text" name="cibil_score" id="cibil_score" placeholder="Enter Cibil Score" autocomplete="password">
+      <label for="user"> Residential Assets Value</label>
+      <input type="text" name="residential_assets_value" id="residential_assets_value" placeholder="Enter Residential Assets Value" autocomplete="name">
+      <label for="psw">Commercial Assets Value</label>
+      <input type="text" name="commercial_assets_value" id="commercial_assets_value" placeholder="Enter Commercial Assets Value" autocomplete="password">
+      <label for="psw">Bank Assets Value</label>
+      <input type="text" name="bank_assets_value" id="bank_assets_value" placeholder="Enter Bank Assets Value" autocomplete="password">
+      <label for="psw">Luxury Assets Value</label>
+      <input type="text" name="luxury_assets_value" id="luxury_assets_value" placeholder="Enter Luxury Assets Value" autocomplete="password">
+      <button type="submit">Predict</button>
+      <!-- <div class="social">
+        <div class="gg"><i class="bi bi-google"></i> Google</div>
+        <div class="fb"><i class="bi bi-facebook"></i> Facebook</div>
+      </div> -->
+    </form>
+  
+  
+  
+    
+    
+    
+    <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+  
+  
+  
+  </body></html>
